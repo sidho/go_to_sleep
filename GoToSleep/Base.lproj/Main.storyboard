@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sleep-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="SleepCalculatorViewController" customModule="GoToSleep" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
+                        <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When I need to wake up:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61S-va-mHT">
+                                <rect key="frame" x="20" y="76" width="188" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="d7b-6m-vcB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4a-4S-tB1">
+                                <rect key="frame" x="190" y="76" width="204" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="PCj-bb-jQ3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long it takes me to fall asleep: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7o-vA-tta">
+                                <rect key="frame" x="20" y="364" width="247" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="7eu-gH-TqU"/>
+                                    <constraint firstAttribute="width" constant="247" id="w04-f1-8fo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="cBA-wg-lTp">
+                                <rect key="frame" x="0.0" y="117" width="414" height="232"/>
+                                <date key="date" timeIntervalSinceReferenceDate="485657904.224711">
+                                    <!--2016-05-23 00:58:24 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="updateWakeTime:" destination="9pv-A4-QxB" eventType="valueChanged" id="t8O-De-Gl6"/>
+                                </connections>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15 minutes" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9z-PM-bJV">
+                                <rect key="frame" x="201" y="365" width="193" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The average person takes 10-20 minutes to fall asleep." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fCS-U3-KIb">
+                                <rect key="frame" x="0.0" y="401" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="5i5-EH-8W1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="d7v-op-k63">
+                                <rect key="frame" x="100" y="455" width="214" height="31"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="9pv-A4-QxB" eventType="valueChanged" id="AF1-h4-YVi"/>
+                                    <action selector="sliderMoved:" destination="9pv-A4-QxB" eventType="touchUpInside" id="TnC-UF-fhj"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z9B-uB-p4d">
+                                <rect key="frame" x="169" y="501" width="76" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="2jV-EW-3o0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <segue destination="kDt-0b-i6a" kind="presentation" identifier="showSleepTimesDetailsView" modalTransitionStyle="coverVertical" id="cPX-NK-0JQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When should I sleep?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5M-7J-77L">
+                                <rect key="frame" x="67" y="28" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CPL-CW-jH3"/>
+                                    <constraint firstAttribute="width" constant="280" id="Hul-gx-VD0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="z7o-vA-tta" firstAttribute="baseline" secondItem="J9z-PM-bJV" secondAttribute="baseline" constant="-1" id="0dZ-eB-QSi"/>
+                            <constraint firstItem="d7v-op-k63" firstAttribute="centerY" secondItem="tsR-hK-woN" secondAttribute="centerY" constant="102" id="1uF-AV-Bg8"/>
+                            <constraint firstItem="z7o-vA-tta" firstAttribute="firstBaseline" secondItem="J9z-PM-bJV" secondAttribute="firstBaseline" constant="-1" id="4C9-2i-mVK"/>
+                            <constraint firstAttribute="trailing" secondItem="cBA-wg-lTp" secondAttribute="trailing" id="6BJ-oi-HXL"/>
+                            <constraint firstItem="E4a-4S-tB1" firstAttribute="baseline" secondItem="61S-va-mHT" secondAttribute="baseline" id="8E2-ld-pLm"/>
+                            <constraint firstItem="fCS-U3-KIb" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="-20" id="9js-Fy-Rmm"/>
+                            <constraint firstItem="fCS-U3-KIb" firstAttribute="top" secondItem="z7o-vA-tta" secondAttribute="bottom" constant="16" id="9u0-02-9o6"/>
+                            <constraint firstItem="z7o-vA-tta" firstAttribute="leading" secondItem="61S-va-mHT" secondAttribute="leading" id="CQr-4a-4fo"/>
+                            <constraint firstItem="E4a-4S-tB1" firstAttribute="centerX" secondItem="J9z-PM-bJV" secondAttribute="centerX" constant="-5.5" id="DMp-Bu-Bnh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J9z-PM-bJV" secondAttribute="trailing" id="IRe-RF-NW6"/>
+                            <constraint firstItem="fCS-U3-KIb" firstAttribute="centerX" secondItem="cBA-wg-lTp" secondAttribute="centerX" id="OJO-f2-nFk"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="centerX" secondItem="cBA-wg-lTp" secondAttribute="centerX" id="U82-tN-7TF"/>
+                            <constraint firstItem="z9B-uB-p4d" firstAttribute="top" secondItem="d7v-op-k63" secondAttribute="bottom" constant="16" id="VgV-B6-GBe"/>
+                            <constraint firstItem="d7v-op-k63" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="82" id="XBV-Rq-9gV"/>
+                            <constraint firstItem="61S-va-mHT" firstAttribute="top" secondItem="E4a-4S-tB1" secondAttribute="top" id="adQ-NF-7L2"/>
+                            <constraint firstItem="fCS-U3-KIb" firstAttribute="centerX" secondItem="d7v-op-k63" secondAttribute="centerX" id="cUg-7j-bgP"/>
+                            <constraint firstItem="A5M-7J-77L" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="dNp-IQ-9U0"/>
+                            <constraint firstItem="61S-va-mHT" firstAttribute="baseline" secondItem="E4a-4S-tB1" secondAttribute="firstBaseline" id="dtr-oD-gPd"/>
+                            <constraint firstItem="cBA-wg-lTp" firstAttribute="top" secondItem="61S-va-mHT" secondAttribute="bottom" constant="24" id="f9y-o0-qcO"/>
+                            <constraint firstItem="61S-va-mHT" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" id="fQR-Cy-BP2"/>
+                            <constraint firstItem="d7v-op-k63" firstAttribute="centerX" secondItem="z9B-uB-p4d" secondAttribute="centerX" id="hhX-eU-br0"/>
+                            <constraint firstItem="E4a-4S-tB1" firstAttribute="trailing" secondItem="d7v-op-k63" secondAttribute="trailing" constant="82" id="jgr-sa-row"/>
+                            <constraint firstItem="cBA-wg-lTp" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="kHm-eb-EfY"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="cBA-wg-lTp" secondAttribute="bottom" constant="338" id="p4A-dz-5IO"/>
+                            <constraint firstItem="d7v-op-k63" firstAttribute="top" secondItem="fCS-U3-KIb" secondAttribute="bottom" constant="33" id="rWR-cf-Byv"/>
+                            <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="z9B-uB-p4d" secondAttribute="bottom" constant="84" id="s54-cm-uOH"/>
+                            <constraint firstItem="61S-va-mHT" firstAttribute="top" secondItem="A5M-7J-77L" secondAttribute="bottom" constant="18" id="xVK-eI-kYj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Sleep" image="first" id="acW-dT-cKf"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="calculateButton" destination="z9B-uB-p4d" id="ssE-Be-1o9"/>
+                        <outlet property="fallAsleepTimeLabel" destination="J9z-PM-bJV" id="3wM-76-eck"/>
+                        <outlet property="fallAsleepTimeSlider" destination="d7v-op-k63" id="YFZ-X8-oRf"/>
+                        <outlet property="timePicker" destination="cBA-wg-lTp" id="SNl-gH-QWe"/>
+                        <outlet property="wakeTimeLabel" destination="E4a-4S-tB1" id="otB-CJ-yR7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-459"/>
+        </scene>
+        <!--Sleep Times Details View Controller-->
+        <scene sceneID="px2-pY-qxV">
+            <objects>
+                <exit id="Ady-zn-yLb" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cv1-K6-gJo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SleepTimeDetailsViewController" id="kDt-0b-i6a" customClass="SleepTimesDetailsViewController" customModule="GoToSleep" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nku-7x-WRu"/>
+                        <viewControllerLayoutGuide type="bottom" id="UM8-Jx-sJv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GKD-9S-OcY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Sleep Times:" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPU-VP-nIf">
+                                <rect key="frame" x="87" y="205" width="240" height="326"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You should go to bed by one of the following times, in order to fall asleep on time:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFM-Eq-gt9">
+                                <rect key="frame" x="17" y="150" width="380" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="tax-h5-fez"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Chw-JL-TNO">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Results" id="Z78-Tf-SMc">
+                                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="t0B-BC-hPH">
+                                            <connections>
+                                                <segue destination="Ady-zn-yLb" kind="unwind" unwindAction="closeView:" id="uk5-Fb-ek2"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UM8-Jx-sJv" firstAttribute="top" secondItem="dPU-VP-nIf" secondAttribute="bottom" constant="205" id="0Wx-jH-Xdg"/>
+                            <constraint firstAttribute="trailing" secondItem="Chw-JL-TNO" secondAttribute="trailing" id="19d-Ee-CUs"/>
+                            <constraint firstItem="dPU-VP-nIf" firstAttribute="leading" secondItem="GKD-9S-OcY" secondAttribute="leadingMargin" constant="67" id="7Hi-fP-bED"/>
+                            <constraint firstItem="Chw-JL-TNO" firstAttribute="leading" secondItem="GKD-9S-OcY" secondAttribute="leadingMargin" constant="-20" id="Om8-Qz-Lah"/>
+                            <constraint firstItem="tFM-Eq-gt9" firstAttribute="leading" secondItem="GKD-9S-OcY" secondAttribute="leadingMargin" constant="-3" id="jvg-ke-33F"/>
+                            <constraint firstItem="dPU-VP-nIf" firstAttribute="centerX" secondItem="GKD-9S-OcY" secondAttribute="centerX" id="mhX-GF-Yhh"/>
+                            <constraint firstItem="Chw-JL-TNO" firstAttribute="top" secondItem="nku-7x-WRu" secondAttribute="bottom" constant="8" id="nDs-Py-bHI"/>
+                            <constraint firstItem="tFM-Eq-gt9" firstAttribute="centerX" secondItem="Chw-JL-TNO" secondAttribute="centerX" id="p4I-bI-s0A"/>
+                            <constraint firstItem="dPU-VP-nIf" firstAttribute="top" secondItem="tFM-Eq-gt9" secondAttribute="bottom" constant="13" id="sTr-UW-yar"/>
+                            <constraint firstItem="dPU-VP-nIf" firstAttribute="centerY" secondItem="GKD-9S-OcY" secondAttribute="centerY" id="zHZ-MU-l8s"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="sleepTimesTextArea" destination="dPU-VP-nIf" id="m9v-4E-pjt"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1404" y="-271"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="GoToSleep" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
+                        <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
+                                <rect key="frame" x="20" y="56" width="374" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="Tbx-TJ-KbR"/>
+                                </constraints>
+                                <string key="text">GoToSleep calculates which times for you to sleep at in order to wake up in between sleep cycles, feeling refreshed and awake. GoToSleep uses the fact that sleep cycles typically last 90 minutes in order to do its calculations.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GoToSleep was created as an exercise to learn Swift and is inspired by (read: completely copies) http://sleepyti.me" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULR-0M-gzb">
+                                <rect key="frame" x="20" y="188" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Dnb-7d-krQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have issues to report or want to see the code? You can find the repository in my github account @sidho." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="njG-yV-J9R">
+                                <rect key="frame" x="20" y="607" width="374" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="vOb-un-3Ih"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ULR-0M-gzb" firstAttribute="top" secondItem="NDk-cv-Gan" secondAttribute="bottom" constant="28" id="25d-OQ-JVW"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" secondItem="ULR-0M-gzb" secondAttribute="leading" id="72e-S7-wAp"/>
+                            <constraint firstItem="ULR-0M-gzb" firstAttribute="trailing" secondItem="njG-yV-J9R" secondAttribute="trailing" id="B3N-m6-PZA"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="njG-yV-J9R" secondAttribute="bottom" constant="31" id="MZF-bw-MbG"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="36" id="N26-j9-X52"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="trailing" secondItem="ULR-0M-gzb" secondAttribute="trailing" id="PSz-nZ-Zcm"/>
+                            <constraint firstItem="ULR-0M-gzb" firstAttribute="leading" secondItem="njG-yV-J9R" secondAttribute="leading" id="jcA-1s-wSi"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="trailing" secondItem="QS5-Rx-YEW" secondAttribute="trailingMargin" id="jpP-Qj-gdt"/>
+                            <constraint firstItem="NDk-cv-Gan" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="rro-rd-GUm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="About" image="second" id="cPa-gy-q4n"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="360"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
